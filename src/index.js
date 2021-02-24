@@ -2,19 +2,24 @@ import React from "react";
 import ReactDom from "react-dom";
 
 function App() {
-  const [inputValue, setInputValue] = React.useState("");
+  const [language, setLanguage] = React.useState("Python");
+  const [yearsExperience, setYearsExperience] = React.useState(0);
   // Use Array Destructuring
   // const inputValue = inputState[0];
   // const setInputValue = inputState[1]; // function to update the input value
 
-  function handleInputChange(event) {
-    setInputValue(event.target.value); // set input value function
-  }
-
   return (
-    <div id="app">
-      <input onChange={handleInputChange} />
-      <p>{inputValue}</p>
+    <div>
+      <button onClick={() => setLanguage("javascript")}>Change language</button>
+      <br />
+      <div>
+        <input
+          type="number"
+          onChange={(event) => setYearsExperience(event.target.value)}
+        />
+      </div>
+      <p>I am learning a language {language}</p>
+      <p>I have {yearsExperience} years of experience</p>
     </div>
   );
 }
