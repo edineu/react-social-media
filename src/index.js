@@ -3,7 +3,6 @@ import ReactDom from "react-dom";
 
 function App() {
   const [inputValue, setInputValue] = React.useState("");
-
   // Use Array Destructuring
   // const inputValue = inputState[0];
   // const setInputValue = inputState[1]; // function to update the input value
